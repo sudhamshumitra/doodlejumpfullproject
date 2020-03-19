@@ -6,10 +6,10 @@ public class infiniteLevel : MonoBehaviour
 {
     public GameObject platform;
     public int numberOfPlatforms = 30;
-    public float minY = 0.3f;
-    public float maxY = 0.5f;
-    public float widthX = 2.7f;
-    public float widthY = 2f;
+    public float minY = 0f;
+    public float maxY = 0.4f;
+    public float widthX = 2f;
+    public float widthY = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
