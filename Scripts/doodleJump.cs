@@ -38,15 +38,6 @@ void Start()
         Vector3 a = Input.acceleration;
         Vector3 position = transform.position;
         Vector3 velocity = rb.velocity;
-        
-
-        //Ensure that when the character is going up, there is no collision
-        if (rb.velocity.y >= 0){
-            bc.enabled = false;
-        } else
-        {
-            bc.enabled = true;
-        }
 
         //For debugging easily on laptop, have to remove this
         if (Input.GetKeyDown(KeyCode.RightArrow))
