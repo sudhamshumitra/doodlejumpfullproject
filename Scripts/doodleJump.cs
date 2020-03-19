@@ -8,6 +8,9 @@ public class doodleJump : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D bc;
     private Vector3 stageDimensions;
+    private Vector3 tilt;
+    float inputAxis = 0f;
+    public float speed = 12f;
 
     private void Awake()
     {
@@ -26,18 +29,19 @@ void Start()
     private void FixedUpdate()
     {
         //movement based on mobile tilt
-        Vector3 tilt = Input.acceleration;
-        transform.Translate(Input.acceleration.x * 6 * Time.deltaTime, 
-                             0, 0);
+        Vector2 velocity = rb.velocity;
+        velocity.x = inputAxis;
+        rb.velocity = velocity;
        
     }
    
     // Update is called once per frame
     void Update()
     {
-        Vector3 a = Input.acceleration;
+        inputAxis = Input.acceleration.x * speed ;
         Vector3 position = transform.position;
         Vector3 velocity = rb.velocity;
+      //  Debug.Log("yvalue_" + position.y);
 
         //For debugging easily on laptop, have to remove this
         if (Input.GetKeyDown(KeyCode.RightArrow))
