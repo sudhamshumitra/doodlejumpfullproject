@@ -34,6 +34,7 @@ void Start()
         rb.velocity = velocity;
        
     }
+
    
     // Update is called once per frame
     void Update()

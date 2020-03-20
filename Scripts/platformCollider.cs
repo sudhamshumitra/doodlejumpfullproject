@@ -5,6 +5,7 @@ using UnityEngine;
 public class platformCollider : MonoBehaviour
 {
     public int forceHeight = 10;
+    public bool shouldDestroy = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class platformCollider : MonoBehaviour
  
     }
 
+    //Destroy platform when not screen moves up
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
@@ -28,7 +30,12 @@ public class platformCollider : MonoBehaviour
         if (collision.relativeVelocity.y <= 0f)
         {
            collision.rigidbody.AddForce(Vector2.up * forceHeight, ForceMode2D.Impulse);
+           if (shouldDestroy)
+           {
+               Destroy(gameObject);
+           }
         }
+        
         
     }
 }
