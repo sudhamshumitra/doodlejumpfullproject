@@ -38,7 +38,7 @@ void Start()
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+       // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 
