@@ -17,6 +17,11 @@ public class platformCollider : MonoBehaviour
  
     }
 
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
     void OnCollisionEnter2D (Collision2D collision)
     {
         //Make character jump on hitting the platform

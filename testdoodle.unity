@@ -288,6 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCharacter: {fileID: 1301252939}
+  platform: {fileID: 1302087130}
 --- !u!1 &1301252935
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +433,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+--- !u!1 &1302087130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 652744609634248531, guid: 0a7bb2777cf6e3c41aa6bcc4a3a7e5fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 153595407}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1529143295
 GameObject:
   m_ObjectHideFlags: 0
