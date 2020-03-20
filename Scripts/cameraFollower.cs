@@ -17,7 +17,7 @@ public class cameraFollower : MonoBehaviour
 
     void LateUpdate()
     {
-        if (myCharacter.position.y > transform.position.y)
+        if (myCharacter && myCharacter.position.y > transform.position.y)
         {
             transform.position = new Vector3(transform.position.x, myCharacter.position.y, transform.position.z);
             scoreScript.score += 1;
