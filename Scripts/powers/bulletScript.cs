@@ -10,8 +10,7 @@ public class bulletScript : MonoBehaviour
     {
         int randomNumberY = Random.Range(1, 6);
         int randomNumberX = Random.Range(-6, 6);
-        GetComponent<Rigidbody2D>().velocity = transform.up * 3;
-            //new Vector2(randomNumberX, randomNumberY) * 3;
+        GetComponent<Rigidbody2D>().velocity = new Vector2(randomNumberX, randomNumberY) * 3;
     }
 
     // Update is called once per frame
