@@ -38,7 +38,7 @@ void Start()
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
-       // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
 
@@ -49,19 +49,7 @@ void Start()
         inputAxis = Input.acceleration.x * speed ;
         Vector3 position = transform.position;
         Vector3 velocity = rb.velocity;
-      //  Debug.Log("yvalue_" + position.y);
-
-        //For debugging easily on laptop, have to remove this
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            rb.AddForce(Vector2.right * 2, ForceMode2D.Impulse);
-        }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            rb.AddForce(Vector2.left * 2, ForceMode2D.Impulse);
-        }
-
-
+        
         //To ensure character comes back to screen when moved out of screen
         if (position.x > stageDimensions.x){
             position.x = -stageDimensions.x;

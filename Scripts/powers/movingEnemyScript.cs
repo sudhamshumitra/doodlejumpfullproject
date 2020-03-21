@@ -10,7 +10,7 @@ public class movingEnemyScript : MonoBehaviour
     BoxCollider2D bc;
     private Vector3 stageDimensions;
     private int direction = 1;
-    public GameObject bullet;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +18,7 @@ public class movingEnemyScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
         stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
-        InvokeRepeating("shootBullet", 1, 3);
-    }
-
-    private void shootBullet()
-    {
-        Instantiate(bullet, transform.position, Quaternion.identity);
+        
     }
 
     // Update is called once per frame
@@ -37,9 +32,6 @@ public class movingEnemyScript : MonoBehaviour
         {
             direction = 1;
         }
-
-        
-
         rb.velocity = transform.right * 2 * direction;        
     }
 
@@ -48,11 +40,7 @@ public class movingEnemyScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(gameObject);
-            collision.rigidbody.AddForce(transform.up * 15, ForceMode2D.Impulse);
-            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-
-            //Destroy(gameObject);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
