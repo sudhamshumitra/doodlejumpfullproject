@@ -28,6 +28,7 @@ public class simplePlatform : MonoBehaviour
     void OnCollisionEnter2D (Collision2D collision)
     {
         //Make character jump on hitting the platform
+        
 
         if (collision.gameObject.tag == "Player" && collision.relativeVelocity.y <= 0f)
         {

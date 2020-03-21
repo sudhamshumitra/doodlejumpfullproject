@@ -10,7 +10,7 @@ public class shootingEnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("shootBullet", 1, 3);
+        InvokeRepeating("shootBullet", 1, 2);
     }
 
     private void shootBullet()

@@ -16,12 +16,12 @@ public class rocketPowerScript : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             Destroy(gameObject);
-            collision.GetComponent<Rigidbody2D>().AddForce(transform.up * 15, ForceMode2D.Impulse);
+            collision.rigidbody.AddForce(transform.up * 20, ForceMode2D.Impulse);
         }
     }
 
