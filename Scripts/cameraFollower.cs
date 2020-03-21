@@ -15,6 +15,7 @@ public class cameraFollower : MonoBehaviour
         stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
     }
 
+    //ensure that the camera follows the character as it goes up and also updates score accordingly
     void LateUpdate()
     {
         if (myCharacter && myCharacter.position.y > transform.position.y)

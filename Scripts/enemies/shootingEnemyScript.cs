@@ -7,17 +7,19 @@ public class shootingEnemyScript : MonoBehaviour
 {
     public GameObject bullet;
 
-    // Start is called before the first frame update
+    //call shoot bullet at regular intervals so that the enemy can shoot bullet out
     void Start()
     {
         InvokeRepeating("shootBullet", 1, 2);
     }
 
+    //Instantiate bullet object
     private void shootBullet()
     {
         Instantiate(bullet, transform.position, Quaternion.identity);
     }
 
+    //game over if object collides
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -27,9 +29,5 @@ public class shootingEnemyScript : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

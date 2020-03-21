@@ -17,6 +17,7 @@ public class restartGame : MonoBehaviour
         
     }
 
+    //reload game and activate the main game scene
     public void reloadGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);

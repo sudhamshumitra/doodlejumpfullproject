@@ -21,7 +21,7 @@ public class movingEnemyScript : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+    //make the enemy move left and right the screen
     void Update()
     {
         if ((bc.bounds.center.x + bc.bounds.extents.x) >= stageDimensions.x)
@@ -35,6 +35,7 @@ public class movingEnemyScript : MonoBehaviour
         rb.velocity = transform.right * 2 * direction;        
     }
 
+    //game over if the character hits this
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")

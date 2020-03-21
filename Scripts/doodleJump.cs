@@ -35,6 +35,7 @@ void Start()
        
     }
 
+    //Game over if character goes outside screen
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
@@ -43,7 +44,7 @@ void Start()
     }
 
 
-    // Update is called once per frame 
+    // based on mobile tilt change position and velocity
     void Update()
     {
         inputAxis = Input.acceleration.x * speed ;

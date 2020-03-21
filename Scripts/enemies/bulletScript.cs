@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class bulletScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //add velocity to the bullet in random directions
     void Start()
     {
         int randomNumberY = Random.Range(1, 6);
@@ -13,12 +13,7 @@ public class bulletScript : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = new Vector2(randomNumberX, randomNumberY) * 3;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Game over if bullet hits character
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")

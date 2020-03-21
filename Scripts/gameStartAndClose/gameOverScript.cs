@@ -7,14 +7,14 @@ public class gameOverScript : MonoBehaviour
 {
     
     Text finalScore;
-    // Start is called before the first frame update
+    
     void Start()
     {
         finalScore = GetComponent<Text>();
 
     }
 
-    // Update is called once per frame
+    //show final score, haven't introduced leader board but can do that later using final score
     void Update()
     {
         finalScore.text = "Final Score: " + scoreScript.score;

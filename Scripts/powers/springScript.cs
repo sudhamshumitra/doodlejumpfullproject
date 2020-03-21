@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class springScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         //Make character jump on hitting the platform
@@ -21,15 +15,10 @@ public class springScript : MonoBehaviour
 
     }
 
-    //Destroy object when not screen moves up
+    //Destroy object when the screen moves up
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
